@@ -31,6 +31,6 @@ else  ## No process running
   cd ${build_path}
 
   echo "Starting ${module_name} module..."
-  java -Dlog4j.configurationFile=./log4j2.xml -Dlog_level=${log_level} -Dlog_path=${log_path} -Dmodule_name=${module_name} -Dspring.config.location=file:${commonConfigurationFilePath} -jar $build 1>/dev/null 2>${log_path}/${module_name}.error &
+  java -Dlog4j.configurationFile=./log4j2.xml -Dlog.level=${log_level} -Dlog.path=${log_path} -Dmodule.name=${module_name} -Dspring.config.location=file:${commonConfigurationFile} -jar $build 1>/dev/null 2>${log_path}/${module_name}.error &
 
 fi
